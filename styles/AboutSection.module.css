@@ -1,0 +1,30 @@
+.title{
+    font-size: 48px;
+    line-height: 30px;
+    font-weight: 800;
+    margin: 0;
+    color: #111827;
+}
+
+.paragraph{
+    font-size: 18px;
+    color: #4b5563;
+    line-height: 30px;
+    word-spacing: 3px;
+}
+
+.contactButton{
+    color: white;
+    background: #111827;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px auto 30px auto;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    cursor: pointer;
+    display: inline-block;
+}

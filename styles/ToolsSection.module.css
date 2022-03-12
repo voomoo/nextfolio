@@ -1,0 +1,45 @@
+.toolsSection{
+    margin: 100px 0px;    
+}
+
+.title{
+    font-size: 48px;
+    line-height: 30px;
+    font-weight: 800;
+    margin: 0;
+    color: #111827;
+    margin-bottom: 40px;
+}
+
+.toolsGrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 30px;
+    column-gap: 80px;
+}
+
+.tool{
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.tool h5{
+    color: #111827;
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 25px;
+    line-height: 0px;
+}
+
+.tool a{
+    text-decoration: underline;
+    margin-left: 25px;
+}
+
+.tool img{
+    max-width: 100%;
+}
+
+

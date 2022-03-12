@@ -1,0 +1,22 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+
+.navbar a.brand{
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.navbar li{
+    display: inline;
+    list-style: none;
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
