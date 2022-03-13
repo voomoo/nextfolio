@@ -7,17 +7,21 @@ import ToolsSection from "../components/ToolsSection";
 import TextDataSchema from "../models/textData"
 
 interface Props{
-  pageData: string
+  title: string,
+  subtitle: string,
+  about: string,
+  contact: string,
+  email: string
 }
 
-const NewPage: NextPage<Props> = (props) => {
+const NewPage: NextPage<Props> = ({title, subtitle, about, contact, email}) => {
   return (
     <>
-      <HeroSection title={props.pageData}/>
-      <AboutSection/>
+      <HeroSection title={title} subtitle={subtitle}/>
+      <AboutSection about={about}/>
       <ToolsSection title={"Tools I Use"}/>
       <ToolsSection title={"Projects"}/>
-      <ConatactMe/>
+      <ConatactMe contact={contact} email={email}/>
     </>
   );
 };
@@ -34,7 +38,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return{
     props:{
-      pageData: data.heroTitle
+      title: data.heroTitle,
+      subtitle: data.heroSubtitle,
+      about: data.aboutMe,
+      contact: data.contactMe,
+      email: data.email
     }
   }
 }

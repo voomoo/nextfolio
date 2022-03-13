@@ -12,7 +12,7 @@ export default async function handler(req, res) {
           req.body
         );
         // Create new product
-        return res.status(200).send(data);
+        return res.status(200).json({success:true, data});
       } catch (error) {
         return res.status(500).json({error: error.message});
       }

@@ -4,15 +4,16 @@ import style from "../styles/HeroSection.module.css";
 
 interface Props{
   title: string;
+  subtitle: string
 }
 
-const HeroSection: NextPage<Props> = (props) => {
+const HeroSection: NextPage<Props> = ({title, subtitle}) => {
   return (
     <section className={style.heroSection}>
       <div>
-        <h2 className={style.title}>{props.title}</h2>
-        <h5 className={style.subtitle}>Designer, Developer, Creator</h5>
-        <button className={style.heroButton}>Contact Me</button>
+        <h2 className={style.title}>{title}</h2>
+        <h5 className={style.subtitle}>{subtitle}</h5>
+        <button className={style.heroButton}>Download My CV</button>
       </div>
     </section>
   );

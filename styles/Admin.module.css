@@ -6,7 +6,7 @@
     margin: 0 auto;
 }
 
-.adminForm input{
+.adminForm input, .adminForm textarea{
     margin: 5px 0px;
     font-size: 14px;
     padding: 5px;
