@@ -5,28 +5,26 @@ import style from "../../styles/Navbar.module.css";
 const Navbar: NextPage = () => {
   return (
     <nav className={style.navbar}>
-      <Link href="/">
+      <Link href="#hero">
         <a className={style.brand}>@rakibul-hasan</a>
       </Link>
       <ul>
         <li>
-          <Link href="/">
-            <a>About</a>
-          </Link>
+          <a href="#about">About</a>
         </li>
         <li>
-          <Link href="/">
-            <a>Tools</a>
-          </Link>
+          <a href="#tools">Tools</a>
         </li>
         <li>
-          <Link href="/">
+          <Link href="#projects">
             <a>Projects</a>
           </Link>
         </li>
-        <li><Link href="/">
-        <a>Contact Me</a>
-      </Link></li>
+        <li>
+          <Link href="#contact">
+            <a>Contact Me</a>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

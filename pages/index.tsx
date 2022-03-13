@@ -17,16 +17,16 @@ interface Props{
 const NewPage: NextPage<Props> = ({title, subtitle, about, contact, email}) => {
   return (
     <>
-      <HeroSection title={title} subtitle={subtitle}/>
-      <AboutSection about={about}/>
-      <ToolsSection title={"Tools I Use"}/>
-      <ToolsSection title={"Projects"}/>
-      <ConatactMe contact={contact} email={email}/>
+      <HeroSection title={title} subtitle={subtitle} id="hero"/>
+      <AboutSection about={about} id="about"/>
+      <ToolsSection title={"Tools I Use"} id="tools"/>
+      <ToolsSection title={"Projects"} id="projects"/>
+      <ConatactMe contact={contact} email={email} id="contact"/>
     </>
   );
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   let data = []
   try {
     await mongoose.connect(`${process.env.MONGO_URI}`)

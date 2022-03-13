@@ -3,12 +3,13 @@ import style from "../styles/ToolsSection.module.css";
 
 interface Props{
     title: string;
+    id: string;
 }
 
-const ToolsSection: NextPage<Props> = (props) => {
+const ToolsSection: NextPage<Props> = ({title, id}) => {
   return (
-    <section className={style.toolsSection}>
-      <h2 className={style.title}>{props.title}</h2>
+    <section className={style.toolsSection} id={id}>
+      <h2 className={style.title}>{title}</h2>
       <div className={style.toolsGrid}>
         <div className={style.tool}>
           <img

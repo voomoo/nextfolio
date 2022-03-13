@@ -15,7 +15,7 @@ const Layout: NextPage = ({ children }): any => {
       <Navbar />
       <div className="container">{children}</div>
       <footer className={styles.footer}>
-        <Link href="/">
+        <Link href="#hero">
           <a>
             Powered by{" "}
             <span className={styles.logo}>

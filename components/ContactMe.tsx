@@ -2,13 +2,14 @@ import { NextPage } from "next";
 import style from "../styles/AboutSection.module.css";
 
 interface Props{
-  contact:string,
-  email: string
+  contact:string;
+  email: string;
+  id: string;
 }
 
-const ConatactMe: NextPage<Props> = ({contact, email}) => {
+const ConatactMe: NextPage<Props> = ({contact, email, id}) => {
   return (
-    <section>
+    <section id={id}>
       <h2 className={style.title}>Contact Me</h2>
       <p className={style.paragraph}>
         {contact}
