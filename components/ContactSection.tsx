@@ -1,13 +1,13 @@
 import { NextPage } from "next";
 import style from "../styles/AboutSection.module.css";
 
-interface Props{
+interface IConatactMe{
   contact:string;
   email:  string;
   id:     string;
 }
 
-const ConatactMe: NextPage<Props> = ({contact, email, id}) => {
+const ContactSection: NextPage<IConatactMe> = ({contact, email, id}) => {
   return (
     <section id={id}>
       <h2 className={style.title}>Contact Me</h2>
@@ -19,4 +19,4 @@ const ConatactMe: NextPage<Props> = ({contact, email, id}) => {
   );
 };
 
-export default ConatactMe;
+export default ContactSection;

@@ -2,25 +2,9 @@ import { NextPage } from "next";
 import { useState } from "react";
 import style from "../styles/Admin.module.css";
 import Router from "next/router";
+import { IAdminControl } from "../types/Types";
 
-interface Props {
-  title:    string;
-  subtitle: string;
-  about:    string;
-  contact:  string;
-  email:    string;
-  cv:       string;
-}
-
-interface Data {
-  title:    string;
-  subtitle: string;
-  about:    string;
-  contact:  string;
-  email:    string;
-}
-
-const AdminControl: NextPage<Props> = ({
+const AdminControl: NextPage<IAdminControl> = ({
   title,
   subtitle,
   about,

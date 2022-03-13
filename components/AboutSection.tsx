@@ -1,12 +1,9 @@
 import { NextPage } from "next";
 import style from "../styles/AboutSection.module.css"
+import { IAboutSection } from "../types/Types";
 
-interface Props{
-  about: string;
-  id:    string;
-}
 
-const AboutSection: NextPage<Props> = ({about, id}) => {
+const AboutSection: NextPage<IAboutSection> = ({about, id}) => {
   return (
     <section id={id}>
       <h2 className={style.title}>About Me</h2>

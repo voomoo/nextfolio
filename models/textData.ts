@@ -48,5 +48,4 @@ const textDataSchema = new Schema({
   }
 });
 
-module.exports =
-  mongoose.models.TextDataSchema || mongoose.model("TextDataSchema", textDataSchema);
+export default mongoose.models.TextDataSchema || mongoose.model("TextDataSchema", textDataSchema);

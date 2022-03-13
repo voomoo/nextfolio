@@ -22,5 +22,4 @@ const projectModel = new Schema({
   }
 });
 
-module.exports =
-  mongoose.models.ProjectModel || mongoose.model("ProjectModel", projectModel);
+export default mongoose.models.ProjectModel || mongoose.model("ProjectModel", projectModel);

@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { useState } from "react";
 import style from "../styles/Admin.module.css";
 
-interface Props{
+interface IAdminLogin{
     setAuth: any
 }
 
@@ -11,7 +11,7 @@ interface FormValues{
     password: string
 }
 
-const AdminLogin: NextPage<Props> = ({setAuth}) => {
+const AdminLogin: NextPage<IAdminLogin> = ({setAuth}) => {
     const [formValue, setFormValue] = useState<FormValues>({
         username: "",
         password: ""

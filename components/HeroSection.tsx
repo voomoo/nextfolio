@@ -2,14 +2,14 @@ import { NextPage } from "next";
 import { title } from "process";
 import style from "../styles/HeroSection.module.css";
 
-interface Props {
+interface IHeroSection {
   title:    string;
   subtitle: string;
   id:       string;
   cvLink:   string;
 }
 
-const HeroSection: NextPage<Props> = ({ title, subtitle, id, cvLink }) => {
+const HeroSection: NextPage<IHeroSection> = ({ title, subtitle, id, cvLink }) => {
   return (
     <section className={style.heroSection} id={id}>
       <div>

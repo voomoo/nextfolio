@@ -1,23 +1,15 @@
 import mongoose from "mongoose";
 import { NextPage, GetStaticProps } from "next";
 import AboutSection from "../components/AboutSection";
-import ConatactMe from "../components/ContactMe";
+import ConatactSection from "../components/ContactSection";
 import HeroSection from "../components/HeroSection";
 import ToolsSection from "../components/ToolsSection";
 import TextDataSchema from "../models/textData";
 import ProjectModel from "../models/projectModel";
+import {INewPage} from "../types/Types"
 
-interface Props {
-  title:    string;
-  subtitle: string;
-  about:    string;
-  contact:  string;
-  email:    string;
-  cv:       string;
-  projects: any;
-}
 
-const NewPage: NextPage<Props> = ({
+const NewPage: NextPage<INewPage> = ({
   title,
   subtitle,
   about,
@@ -32,7 +24,7 @@ const NewPage: NextPage<Props> = ({
       <AboutSection about={about} id="about" />
       <ToolsSection title={"Tools I Use"} id="tool" projects={projects} />
       <ToolsSection title={"Projects"} id="project" projects={projects} />
-      <ConatactMe   contact={contact} email={email} id="contact" />
+      <ConatactSection   contact={contact} email={email} id="contact" />
     </>
   );
 };

@@ -4,17 +4,10 @@ import { useState } from "react";
 import AdminControl from "../components/AdminControl";
 import AdminLogin from "../components/AdminLogin";
 import TextDataSchema from "../models/textData";
+import {IAdminPage} from "../types/Types"
 
-interface Props {
-  heroTitle:    string;
-  heroSubtitle: string;
-  aboutMe:      string;
-  contactMe:    string;
-  email:        string;
-  cvLink:       string;
-}
 
-const AdminPage: NextPage<Props> = ({
+const AdminPage: NextPage<IAdminPage> = ({
   heroTitle,
   heroSubtitle,
   aboutMe,
@@ -22,7 +15,6 @@ const AdminPage: NextPage<Props> = ({
   email,
   cvLink,
 }) => {
-  console.log(cvLink);
   const [auth, setAuth] = useState<boolean>(false);
   return auth ? (
     <AdminControl
@@ -43,7 +35,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   try {
     await mongoose.connect(`${process.env.MONGO_URI}`);
     data = await TextDataSchema.findById("622c7a351e8ec9692f2cece2");
-    console.log(data);
   } catch (error) {
     console.log(error);
   }
