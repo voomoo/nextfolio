@@ -6,25 +6,25 @@ import HeroSection from "../components/HeroSection";
 import ToolsSection from "../components/ToolsSection";
 import TextDataSchema from "../models/textData";
 import ProjectModel from "../models/projectModel";
-import {INewPage} from "../types/Types"
+import {ICommonProps} from "../types/Types"
 
 
-const NewPage: NextPage<INewPage> = ({
-  title,
-  subtitle,
-  about,
-  contact,
+const NewPage: NextPage<ICommonProps> = ({
+  heroTitle,
+  heroSubtitle,
+  aboutMe,
+  contactMe,
   email,
-  cv,
+  cvLink,
   projects,
 }) => {
   return (
     <>
-      <HeroSection  title={title} subtitle={subtitle} id="hero" cvLink={cv} />
-      <AboutSection about={about} id="about" />
+      <HeroSection  title={heroTitle} subtitle={heroSubtitle} id="hero" cvLink={cvLink} />
+      <AboutSection about={aboutMe} id="about" />
       <ToolsSection title={"Tools I Use"} id="tool" projects={projects} />
       <ToolsSection title={"Projects"} id="project" projects={projects} />
-      <ConatactSection   contact={contact} email={email} id="contact" />
+      <ConatactSection   contact={contactMe} email={email} id="contact" />
     </>
   );
 };
@@ -42,12 +42,12 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      title:    data.heroTitle,
-      subtitle: data.heroSubtitle,
-      about:    data.aboutMe,
-      contact:  data.contactMe,
-      email:    data.email,
-      cv:       data.cvLink,
+      heroTitle:    data.heroTitle,
+      heroSubtitle: data.heroSubtitle,
+      aboutMe:      data.aboutMe,
+      contactMe:    data.contactMe,
+      email:        data.email,
+      cvLink:       data.cvLink,
       projects: projectData.map((project) => ({
         name:   project.projectName,
         link:   project.projectLink,

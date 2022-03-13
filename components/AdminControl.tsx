@@ -2,32 +2,33 @@ import { NextPage } from "next";
 import { useState } from "react";
 import style from "../styles/Admin.module.css";
 import Router from "next/router";
-import { IAdminControl } from "../types/Types";
+import { ICommonProps } from "../types/Types";
 
-const AdminControl: NextPage<IAdminControl> = ({
-  title,
-  subtitle,
-  about,
-  contact,
+const AdminControl: NextPage<ICommonProps> = ({
+  heroTitle,
+  heroSubtitle,
+  aboutMe,
+  contactMe,
   email,
-  cv,
+  cvLink,
+  projects
 }) => {
-  const [heroTitle, setHeroTitle]       = useState<string>(title);
-  const [heroSubtitle, setHeroSubtitle] = useState<string>(subtitle);
-  const [aboutMe, setAboutMe]           = useState<string>(about);
-  const [contactMe, setContactMe]       = useState<string>(contact);
-  const [emailAddress, setEmailAddress] = useState<string>(email);
-  const [cvLink, setCvLink]             = useState<string>(cv);
+  const [title,        setTitle]         = useState<string>(heroTitle);
+  const [subtitle,     setSubtitle]      = useState<string>(heroSubtitle);
+  const [about,        setAbout]         = useState<string>(aboutMe);
+  const [contact,      setContact]       = useState<string>(contactMe);
+  const [emailAddress, setEmailAddress]  = useState<string>(email);
+  const [cv,           setCv]            = useState<string>(cvLink);
 
   const handleUpdate = async () => {
     try {
       const updatedData = {
-        heroTitle,
-        heroSubtitle,
-        aboutMe,
-        contactMe,
+        title,
+        subtitle,
+        about,
+        contact,
         email: emailAddress,
-        cvLink,
+        cv,
       };
       const requestOptions = {
         method: "PUT",
@@ -43,6 +44,7 @@ const AdminControl: NextPage<IAdminControl> = ({
       console.log(error);
     }
   };
+  console.log(projects)
   return (
     <section>
       <h1>Admin Control</h1>
@@ -52,8 +54,8 @@ const AdminControl: NextPage<IAdminControl> = ({
           <input
             type="text"
             placeholder="Hero Title (ex. Rakibul Hasan)"
-            value={heroTitle}
-            onChange={(e) => setHeroTitle(e.target.value)}
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </div>
 
@@ -62,8 +64,8 @@ const AdminControl: NextPage<IAdminControl> = ({
           <input
             type="text"
             placeholder="Hero Title (ex. Rakibul Hasan)"
-            value={heroSubtitle}
-            onChange={(e) => setHeroSubtitle(e.target.value)}
+            value={subtitle}
+            onChange={(e) => setSubtitle(e.target.value)}
           />
         </div>
 
@@ -71,8 +73,8 @@ const AdminControl: NextPage<IAdminControl> = ({
           <label>About: </label>
           <textarea
             placeholder="Hero Title (ex. Rakibul Hasan)"
-            value={aboutMe}
-            onChange={(e) => setAboutMe(e.target.value)}
+            value={about}
+            onChange={(e) => setAbout(e.target.value)}
             rows={10}
           />
         </div>
@@ -81,8 +83,8 @@ const AdminControl: NextPage<IAdminControl> = ({
           <label>Contact: </label>
           <textarea
             placeholder="Hero Title (ex. Rakibul Hasan)"
-            value={contactMe}
-            onChange={(e) => setContactMe(e.target.value)}
+            value={contact}
+            onChange={(e) => setContact(e.target.value)}
             rows={6}
           />
         </div>
@@ -102,8 +104,8 @@ const AdminControl: NextPage<IAdminControl> = ({
           <input
             type="text"
             placeholder="CV Link"
-            value={cvLink}
-            onChange={(e) => setCvLink(e.target.value)}
+            value={cv}
+            onChange={(e) => setCv(e.target.value)}
           />
         </div>
 

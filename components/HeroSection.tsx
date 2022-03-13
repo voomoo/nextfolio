@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import { title } from "process";
 import style from "../styles/HeroSection.module.css";
 
 interface IHeroSection {
