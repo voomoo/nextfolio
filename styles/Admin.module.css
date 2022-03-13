@@ -15,6 +15,17 @@
     border: 1px solid rgb(17, 17, 17);
 }
 
+.adminForm div{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+}
+
+.adminForm div label{
+    font-weight: 600;
+    font-size: 12px;
+}
+
 .adminForm button{
     color: white;
     background: #111827;

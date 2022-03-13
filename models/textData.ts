@@ -43,6 +43,9 @@ const textDataSchema = new Schema({
   email: {
     type: String,
   },
+  cvLink: {
+    type: String
+  }
 });
 
 module.exports =

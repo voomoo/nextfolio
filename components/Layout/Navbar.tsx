@@ -5,7 +5,7 @@ import style from "../../styles/Navbar.module.css";
 const Navbar: NextPage = () => {
   return (
     <nav className={style.navbar}>
-      <Link href="#hero">
+      <Link href="/">
         <a className={style.brand}>@rakibul-hasan</a>
       </Link>
       <ul>
@@ -13,10 +13,10 @@ const Navbar: NextPage = () => {
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="#tools">Tools</a>
+          <a href="#tool">Tools</a>
         </li>
         <li>
-          <Link href="#projects">
+          <Link href="#project">
             <a>Projects</a>
           </Link>
         </li>

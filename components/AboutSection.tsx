@@ -3,7 +3,7 @@ import style from "../styles/AboutSection.module.css"
 
 interface Props{
   about: string;
-  id: string
+  id:    string;
 }
 
 const AboutSection: NextPage<Props> = ({about, id}) => {

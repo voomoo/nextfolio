@@ -17,7 +17,7 @@ const AdminLogin: NextPage<Props> = ({setAuth}) => {
         password: ""
     })
     const handleLogin = ():void => {
-        if(formValue.username === 'VooMoo' && formValue.password === '123456'){
+        if(formValue.username === 'rhasan.7896' && formValue.password === '123456'){
             setAuth(true)
         }
     }
@@ -25,8 +25,8 @@ const AdminLogin: NextPage<Props> = ({setAuth}) => {
     <section>
       <h1>Admin Panel</h1>
       <div className={style.adminForm}>
-        <input type="text" placeholder="Username" value={formValue.username} onChange={e => setFormValue({...formValue, username: e.target.value})}/>
-        <input type="password" placeholder="Password" value={formValue.password} onChange={e => setFormValue({...formValue, password: e.target.value})}/>
+        <input type="text"      placeholder="Username" value={formValue.username} onChange={e => setFormValue({...formValue, username: e.target.value})}/>
+        <input type="password"  placeholder="Password" value={formValue.password} onChange={e => setFormValue({...formValue, password: e.target.value})}/>
         <button onClick={handleLogin}>Login</button>
       </div>
     </section>

@@ -3,8 +3,8 @@ import style from "../styles/AboutSection.module.css";
 
 interface Props{
   contact:string;
-  email: string;
-  id: string;
+  email:  string;
+  id:     string;
 }
 
 const ConatactMe: NextPage<Props> = ({contact, email, id}) => {
